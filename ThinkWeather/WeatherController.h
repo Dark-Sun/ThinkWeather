@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-
+#import "MapController.h"
+#import "WeatherModel.h"
 
 @interface WeatherController : UIViewController <CLLocationManagerDelegate>
 
@@ -18,7 +19,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *windDirection;
 @property (weak, nonatomic) IBOutlet UIButton *rainChance;
 
+@property (weak, nonatomic) IBOutlet UIView *forecastContainer;
+
 - (void) updateData;
-- (void) updateData: (CLLocation*) location ;
+- (void) updateDataWithLocation:    (CLLocation*)      location;
+- (void) updateDataWithNotification:(NSNotification *) notification;
+
+- (void) setWeatherData: (NSDictionary*) data;
+-
+(void) updateForecast;
 
 @end

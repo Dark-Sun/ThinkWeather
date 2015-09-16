@@ -11,7 +11,6 @@
 		0898C5F51BA8466D00E5DF4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0898C5F41BA8466D00E5DF4E /* main.m */; };
 		0898C5F81BA8466D00E5DF4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0898C5F71BA8466D00E5DF4E /* AppDelegate.m */; };
 		0898C5FB1BA8466D00E5DF4E /* ThinkWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0898C5F91BA8466D00E5DF4E /* ThinkWeather.xcdatamodeld */; };
-		0898C5FE1BA8466D00E5DF4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0898C5FD1BA8466D00E5DF4E /* ViewController.m */; };
 		0898C6011BA8466D00E5DF4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0898C5FF1BA8466D00E5DF4E /* Main.storyboard */; };
 		0898C6031BA8466D00E5DF4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0898C6021BA8466D00E5DF4E /* Images.xcassets */; };
 		0898C6061BA8466D00E5DF4E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0898C6041BA8466D00E5DF4E /* LaunchScreen.xib */; };
@@ -41,8 +40,6 @@
 		0898C5F61BA8466D00E5DF4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0898C5F71BA8466D00E5DF4E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0898C5FA1BA8466D00E5DF4E /* ThinkWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThinkWeather.xcdatamodel; sourceTree = "<group>"; };
-		0898C5FC1BA8466D00E5DF4E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0898C5FD1BA8466D00E5DF4E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0898C6001BA8466D00E5DF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0898C6021BA8466D00E5DF4E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0898C6051BA8466D00E5DF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -82,6 +79,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0854A9CA1BAA0D0700551BD4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0898C6291BA8E57D00E5DF4E /* WeatherModel.h */,
+				0898C62A1BA8E57D00E5DF4E /* WeatherModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0854A9CB1BAA0D1200551BD4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0898C6261BA8D8F100E5DF4E /* WeatherController.h */,
+				0898C6271BA8D8F100E5DF4E /* WeatherController.m */,
+				0898C6231BA8D2F800E5DF4E /* MapController.h */,
+				0898C6241BA8D2F800E5DF4E /* MapController.m */,
+				0898C61E1BA8CC2700E5DF4E /* SearchLocationController.h */,
+				0898C6211BA8CE3A00E5DF4E /* SearchLocationController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0854A9CC1BAA0D2C00551BD4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0898C5FF1BA8466D00E5DF4E /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		0898C5E61BA8466D00E5DF4E = {
 			isa = PBXGroup;
 			children = (
@@ -105,19 +132,11 @@
 		0898C5F11BA8466D00E5DF4E /* ThinkWeather */ = {
 			isa = PBXGroup;
 			children = (
+				0854A9CC1BAA0D2C00551BD4 /* Storyboards */,
+				0854A9CB1BAA0D1200551BD4 /* Controllers */,
+				0854A9CA1BAA0D0700551BD4 /* Models */,
 				0898C5F61BA8466D00E5DF4E /* AppDelegate.h */,
 				0898C5F71BA8466D00E5DF4E /* AppDelegate.m */,
-				0898C5FC1BA8466D00E5DF4E /* ViewController.h */,
-				0898C5FD1BA8466D00E5DF4E /* ViewController.m */,
-				0898C5FF1BA8466D00E5DF4E /* Main.storyboard */,
-				0898C6261BA8D8F100E5DF4E /* WeatherController.h */,
-				0898C6271BA8D8F100E5DF4E /* WeatherController.m */,
-				0898C6291BA8E57D00E5DF4E /* WeatherModel.h */,
-				0898C62A1BA8E57D00E5DF4E /* WeatherModel.m */,
-				0898C6231BA8D2F800E5DF4E /* MapController.h */,
-				0898C6241BA8D2F800E5DF4E /* MapController.m */,
-				0898C61E1BA8CC2700E5DF4E /* SearchLocationController.h */,
-				0898C6211BA8CE3A00E5DF4E /* SearchLocationController.m */,
 				0898C6021BA8466D00E5DF4E /* Images.xcassets */,
 				0898C6041BA8466D00E5DF4E /* LaunchScreen.xib */,
 				0898C5F91BA8466D00E5DF4E /* ThinkWeather.xcdatamodeld */,
@@ -309,7 +328,6 @@
 				0898C5FB1BA8466D00E5DF4E /* ThinkWeather.xcdatamodeld in Sources */,
 				0898C62B1BA8E57D00E5DF4E /* WeatherModel.m in Sources */,
 				0898C6281BA8D8F100E5DF4E /* WeatherController.m in Sources */,
-				0898C5FE1BA8466D00E5DF4E /* ViewController.m in Sources */,
 				0898C6221BA8CE3A00E5DF4E /* SearchLocationController.m in Sources */,
 				0898C6251BA8D2F800E5DF4E /* MapController.m in Sources */,
 				0898C5F51BA8466D00E5DF4E /* main.m in Sources */,

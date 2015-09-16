@@ -11,6 +11,16 @@
 
 @interface WeatherModel : NSObject
 
-+ (void) findByLocation: (CLLocation*) location completion:(void (^)(id id))completion failure:(void (^)(NSError * error))failure;
-+ (void) findByName: (NSString*) name     completion:(void (^)(id id))completion failure:(void (^)(NSError * error))failure;
++ (void) getWeatherByLocation: (CLLocation*) location
+                   completion:(void (^)(id id))completion
+                      failure:(void (^)(NSError * error))failure;
+
++ (void) getWeatherByName: (NSString*) name
+               completion: (void (^)(id id))completion
+                  failure: (void (^)(NSError * error))failure;
+
++ (void) getWeatherForecastByLocation: (CLLocation*) coordinates
+                           completion: (void (^)(id id))completion
+                              failure: (void (^)(NSError * error))failure;
+
 @end

@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Codegemz. All rights reserved.
 //
 
+@import GoogleMaps;
 #import <UIKit/UIKit.h>
 
 @interface MapController : UIViewController
