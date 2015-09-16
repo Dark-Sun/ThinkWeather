@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Codegemz. All rights reserved.
 //
 
+@import GoogleMaps;
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -23,11 +24,16 @@
                                                             NSForegroundColorAttributeName: navBarTextColor,
                                                             NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:16.0f]
                                                             }];
+    [[UINavigationBar appearance] setTintColor: navBarTextColor];
+    
     [[UINavigationBar appearance] setBarTintColor:    [UIColor whiteColor]];
     [[UINavigationBar appearance] setBackgroundImage: [[UIImage alloc] init]
                                       forBarPosition: UIBarPositionAny
                                           barMetrics: UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:     [[UIImage alloc] init]];
+    
+    [GMSServices provideAPIKey:@"AIzaSyBzMw_OvSIoROwcZNlcz5diFBDNj4fVbEA"]; // Gmaps API key
+
 
 
     
@@ -88,7 +94,8 @@
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ThinkWeather.sqlite"];
+//    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ThinkWeather.sqlite"];
+    NSURL *storeURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"ThinkWeather.sqlite" ofType:@"sqlite"]];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
